@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   root to: 'helitages#top'
 
   namespace :admin do
+
     resources :helitages
   end
 
   namespace :user do
+    get '/companies/historys' => 'companies#history', as: 'companies_history'
     resources :helitages
   end
 
