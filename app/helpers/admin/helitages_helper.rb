@@ -1,0 +1,2 @@
+module Admin::HelitagesHelper
+end
