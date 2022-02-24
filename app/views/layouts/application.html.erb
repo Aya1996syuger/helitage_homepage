@@ -14,19 +14,11 @@
     <!--ナビゲーションバー-->
       <div class='navgation'>
         <nav>
-          <% if admin_signed_in? %>
-            <div class="navitem">
-              <button type="button" class="btn btn-default navbar-btn">
-
-              </button>
-            </div>
-          <% else %>
-            <div class="navitem">
-              <button type="button" class="btn btn-default navbar-btn">
-
-              </button>
-            </div>
-          <% end %>
+          <div class="navitem">
+            <%= link_to "Home", root_path %>
+            <%= link_to "company", user_companies_top_path %>
+            <%= link_to "inquiry", user_companies_inquiry_path %>
+          </div>
         </nav>
       </div>
     </header>
