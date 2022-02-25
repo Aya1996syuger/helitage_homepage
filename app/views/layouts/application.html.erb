@@ -16,14 +16,21 @@
         <nav>
           <div class="navitem">
             <%= link_to "Home", root_path %>
-            <%= link_to "company", user_companies_top_path %>
-            <%= link_to "inquiry", user_companies_inquiry_path %>
+            <%= link_to "世界遺産とは", user_helitages_helitage_path %>
+            <%= link_to "企業概要", user_companies_top_path %>
+            <%= link_to "問い合わせ", user_companies_inquiry_path %>
           </div>
         </nav>
       </div>
     </header>
 
-
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+    <p>株式会社WTS</p>
+    <!--ツイッター、インスタアイコン、フェイスブック-->
+  </footer>
   </body>
+  
 </html>

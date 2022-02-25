@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     get '/companies/overviews' => 'companies#overview', as: 'companies_overview'
     resources :companies
 
-
+    get '/helitages/helitages' => 'helitages#helitage', as: 'helitages_helitage'
     resources :helitages
   end
 
