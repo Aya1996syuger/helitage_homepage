@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get '/companies/tops' => 'companies#top', as: 'companies_top'
     get '/companies/historys' => 'companies#history', as: 'companies_history'
     get '/companies/inquiries' => 'companies#inquiry', as: 'companies_inquiry'
+    get '/companies/overviews' => 'companies#overview', as: 'companies_overview'
     resources :companies
 
 
