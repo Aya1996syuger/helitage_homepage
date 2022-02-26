@@ -22,11 +22,20 @@
     <!--ナビゲーションバー-->
       <div class='navgation'>
         <nav>
-          <div class="navitem">
-            <%= link_to "Home", root_path %>
-            <%= link_to "世界遺産とは", user_helitages_helitage_path %>
-            <%= link_to "企業概要", user_companies_top_path %>
-            <%= link_to "問い合わせ", user_companies_inquiry_path %>
+          <% if admin_signed_in? %>
+            <div class="navitem">
+              <%= link_to "Home", root_path %>
+              <%= link_to "NEWS作成", new_admin_newse_path %>
+              <%= link_to "世界遺産作成", new_admin_helitage_path %>
+              <%= link_to "問い合わせ一覧", user_companies_inquiry_path %>
+            
+          <% else %>
+            <div class="navitem">
+              <%= link_to "Home", root_path %>
+              <%= link_to "世界遺産とは", user_helitages_helitage_path %>
+              <%= link_to "企業概要", user_companies_top_path %>
+              <%= link_to "問い合わせ", user_companies_inquiry_path %>
+          <% end %>
           </div>
         </nav>
       </div>
