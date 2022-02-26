@@ -5,8 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta charset="UTF-8" />
+    <!-- FontAwesomeの読み込み -->
+    <script src="https://kit.fontawesome.com/e9525941b3.js" crossorigin="anonymous"></script>
+
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -30,7 +38,10 @@
     <footer>
     <p>株式会社WTS</p>
     <!--ツイッター、インスタアイコン、フェイスブック-->
+    <i class="fab fa-instagram-square fa-fw fa-2x"></i>
+    <i class="fab fa-twitter-square fa-fw fa-2x"></i>
+    <i class="fab fa-facebook-square fa-fw fa-2x"></i>
   </footer>
   </body>
-  
+
 </html>
