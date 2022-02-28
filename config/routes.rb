@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :genres
     resources :newses
     resources :helitages
+    resources :countries
+    
   end
 
   namespace :user do

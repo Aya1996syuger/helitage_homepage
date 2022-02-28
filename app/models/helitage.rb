@@ -1,0 +1,2 @@
+class Helitage < ApplicationRecord
+end

@@ -1,1 +1,39 @@
 <h1>世界遺産投稿</h1>
+
+<!-- 記録作成 -->
+<%= form_with model:@helitage, url:admin_helitages_path,local:true do |f| %>
+
+<!--%= f.attachment_field :files_images, multiple: true %-->
+
+
+<%= f.label :世界遺産名%>
+<%= f.text_field :name,placeholder: "白神山地" %></br>
+
+
+<!--%= f.label :国名選択 %-->
+<!--%= f.collection_select :country_id, Country.all, :id, :name %-->
+
+<%= f.label :ジャンル%>
+<%= f.collection_select(:genre_id, @genres, :id, :name, include_blank: "ジャンルは？",size: "20x20") %></br>
+
+<%= f.label :見出し%>
+<%= f.text_field :point %></br>
+
+<%= f.label :感想%></br>
+<%= f.text_area :body,size: "100x10" %></br>
+
+
+<%= f.label :予算%>
+<%= f.text_field :price %></br>
+
+<%= f.label :住所%>
+<%= f.text_field :address %></br>
+
+<%= f.label :営業時間%>
+<%= f.time_field :start_time %>  ~  <%= f.time_field :finish_time %></br>
+
+<%= f.submit '投稿' %>
+
+
+<% end %>
+
