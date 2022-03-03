@@ -1,9 +1,9 @@
 <h1>世界遺産投稿</h1>
 
 <!-- 記録作成 -->
-<%= form_with model:@helitage, url:admin_helitages_path,local:true do |f| %>
+<%= form_with model:@helitage, url:admin_helitages_path,local:true do |f| %></br>
 
-<!--%= f.attachment_field :files_images, multiple: true %-->
+<%= f.attachment_field :image %></br>
 
 
 <%= f.label :世界遺産名%>

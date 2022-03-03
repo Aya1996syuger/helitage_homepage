@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admins
   root to: 'helitages#top'
+  resources :post_images, only: [:new, :create, :index, :show, :destroy]
 
   namespace :admin do
     resources :genres
