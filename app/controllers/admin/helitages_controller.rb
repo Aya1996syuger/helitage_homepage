@@ -23,7 +23,7 @@ class Admin::HelitagesController < ApplicationController
   end
 
   def show
-      @helitages = Helitage.find(params[:id])
+    @helitage = Helitage.find(params[:id])
   end
 
   def edit

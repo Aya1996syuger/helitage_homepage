@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_03_144438) do
+ActiveRecord::Schema.define(version: 2022_02_28_144406) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2022_03_03_144438) do
   end
 
   create_table "helitages", force: :cascade do |t|
-    t.integer "image_id"
+    t.string "image_id"
     t.integer "genre_id"
     t.integer "country_id"
     t.string "name"

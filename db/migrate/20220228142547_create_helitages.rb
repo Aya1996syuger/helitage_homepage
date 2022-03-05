@@ -1,7 +1,7 @@
 class CreateHelitages < ActiveRecord::Migration[5.2]
   def change
     create_table :helitages do |t|
-      t.integer :image_id
+      t.string :image_id
       t.integer :genre_id
       t.integer :country_id
       t.string :name
