@@ -1,1 +1,11 @@
 <h1>世界遺産一覧</h1>
+
+<%= link_to "世界遺産作成",new_admin_helitage_path, class:"btn btn-success"%></br>
+<div class="cards">
+ <% @helitages.each do |helitage| %>
+      <div class="card">
+        <%= attachment_image_tag helitage, :image %>
+       
+      </div>
+  <% end %>
+</div>

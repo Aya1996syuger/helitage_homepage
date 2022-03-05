@@ -1,4 +1,4 @@
 class HelitagesController < ApplicationController
-  def new
+  def top
   end
 end
