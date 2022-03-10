@@ -1,47 +1,52 @@
 <h1>世界遺産詳細</h1>
 
+<%= attachment_image_tag @helitage, :image, :fill, 400, 400 %></br>
 
-            <%= attachment_image_tag @helitage, :image, :fill, 400, 400 %>
+<table>
+      <h2><%= @helitage.name %></h2>
 
-           
-<!--        <div class="visit">-->
-<!--            訪問日</%= @record.record_date.strftime('%Y/%m/%d') %></br>-->
-<!--            <h4><i class="far fa-hand-point-down"></i></%= @record.title %></h4>-->
-<!--        </div>-->
-        
-<!--        <div class= "row">-->
-<!--             <div class="col-md-7 offset-md-0">-->
-<!--                %=safe_join(@record.body.split("\n"),tag(:br))%>-->
-<!--            </div>-->
-<!--             <div class="col-md-5 offset-md-0">-->
-<!--                 <table class="info">-->
-<!--                     <th><h5><i class="far fa-question-circle">Infomation</i></h5></th>-->
-                    
+
 <!--                    <tr>-->
 <!--                        <th>都道府県</th>-->
 <!--                        <td>%= @record.prefecture.name %></td>-->
 <!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th>ジャンル</th>-->
-<!--                        <td>%= @record.genre.name %></td>-->
-<!--                    </tr>-->
-    
-<!--                    <tr>-->
-<!--                        <th>予算</th>-->
-<!--                        <td>¥%= @record.price %></td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th>住所</th>-->
-<!--                        <td>%= @record.address %></td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th>メンバー</th>-->
-                        <!--<td>%= @record.member %></td>-->
-<!--                    </tr>-->
-<!--                </table>-->
-<!--            </div>-->
-            <!--%= link_to "編集する", edit_record_path(@record), class: "btn btn-danger" %-->
-<!--        </div>-->
-        
-<!--    </div>-->
-<!--</div>-->
+  <thead>
+    <tr>
+      <!--<td><!%= @helitage.genre_id.name %></td>-->
+    </tr>
+  </thead>
+
+  <thead>
+    <tr>
+      <th></th>
+      <td></td><%= @helitage.point %></td>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+        <td><%= @helitage.body %></td>
+    </tr>
+  <thead>
+    <tr>
+      <th>Info</th>
+    </tr>
+    <tr>
+      <td>住所:<%= @helitage.address %></td>
+    </tr>
+    <tr>
+      <td>営業時間:<%= @helitage.time %></td>
+    </tr>
+    <tr>
+      <td>定休日:<%= @helitage.holiday %></td>
+    </tr>
+    <tr>
+      <td>予算:<%= @helitage.price%></td>
+    </tr>
+    <tr>
+      <!--<td>URL:<!%= @helitage.url%></td>-->
+    </tr>
+  </thead>
+</table>
+</div>
+  <%= link_to "編集する", edit_admin_helitage_path(@helitage), class: "btn btn-danger" %>
+</div>

@@ -10,8 +10,8 @@ class CreateHelitages < ActiveRecord::Migration[5.2]
       t.float:longitude
       t.string :point
       t.string :body
-      t.time :start_time
-      t.time :finish_time
+      t.string :time
+      t.string :holiday
       t.string :price
       t.timestamps
     end

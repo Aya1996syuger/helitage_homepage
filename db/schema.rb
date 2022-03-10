@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(version: 2022_02_28_144406) do
     t.float "longitude"
     t.string "point"
     t.string "body"
-    t.time "start_time"
-    t.time "finish_time"
+    t.string "time"
+    t.string "holiday"
     t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

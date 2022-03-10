@@ -4,7 +4,7 @@ class Admin::HelitagesController < ApplicationController
     @genres = Genre.all
     @countries = Country.all
   end
-  
+
 
   def create
     @helitage = Helitage.new(helitage_params)
@@ -46,7 +46,7 @@ class Admin::HelitagesController < ApplicationController
 
   private
     def helitage_params
-      params.require(:helitage).permit(:genre_id, :address, :latitude, :longitude, :name, :point, :body, :start_time, :finish_time, :price, :image)
+      params.require(:helitage).permit(:genre_id, :address, :latitude, :longitude, :name, :point, :body, :time, :holiday, :price, :image)
     end
 
 end
