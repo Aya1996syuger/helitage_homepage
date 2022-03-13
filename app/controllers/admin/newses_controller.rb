@@ -1,2 +1,53 @@
 class Admin::NewsesController < ApplicationController
+  def new
+    @news = News.new
+    @genres = Genre.all
+    @countries = Country.all
+  end
+
+
+  def create
+    @news = News.new(News_params)
+    #投稿
+
+    if @news.save
+        redirect_to admin_Newss_path
+    else
+        @genres = Genre.all
+        render :new
+    end
+  end
+
+  def index
+    @news = News.all
+  end
+
+  def show
+    @news = News.find(params[:id])
+  end
+
+  def edit
+    @news = News.find(params[:id])
+    @genres= Genre.all
+  end
+
+  def destroy
+    @news = News.find(params[:id])
+    @news.destroy
+    redirect_to Newss_path
+  end
+
+  def update
+  @newss = News.find(params[:id])
+  @newss.update(news_params)
+  redirect_to news_path(@newss)
+
+  end
+
+  private
+    def news_params
+      params.require(:news).permit(:genre_id, :address, :name, :point, :body, :image)
+    end
+
 end
+
