@@ -1,1 +1,8 @@
 <h1>NEWS一覧</h1>
+
+<% @newses.each do |news| %>
+    <div class="helitage_card">
+            <%= news.name %></br>
+            <%= news.point %></br>
+        <% end %>
+    </div>

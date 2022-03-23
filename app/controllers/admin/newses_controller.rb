@@ -7,19 +7,20 @@ class Admin::NewsesController < ApplicationController
 
 
   def create
-    @news = News.new(News_params)
+    @news = News.new(news_params)
     #投稿
 
     if @news.save
-        redirect_to admin_Newss_path
+        redirect_to admin_newses_path
     else
         @genres = Genre.all
         render :new
     end
+
   end
 
   def index
-    @news = News.all
+    @newses = News.all
   end
 
   def show
@@ -38,9 +39,9 @@ class Admin::NewsesController < ApplicationController
   end
 
   def update
-  @newss = News.find(params[:id])
-  @newss.update(news_params)
-  redirect_to news_path(@newss)
+    @newss = News.find(params[:id])
+    @newss.update(news_params)
+    redirect_to news_path(@newss)
 
   end
 
