@@ -1,6 +1,10 @@
 <h1>NEWS詳細</h1>
 
     <div class="helitage_card">
+            <%= attachment_image_tag @news, :image, :fill, 200, 200 %></br>
             <%= @news.name %></br>
             <%= @news.point %></br>
+            <%= @news.body %></br>
+            <%= @news.address %></br>
+
     </div>

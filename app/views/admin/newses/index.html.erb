@@ -1,8 +1,30 @@
 <h1>NEWS一覧</h1>
 
-<% @newses.each do |news| %>
-    <div class="helitage_card">
-            <%= news.name %></br>
-            <%= news.point %></br>
-        <% end %>
+<div class="container">
+  <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <% @newses.each do |news| %>
+                <div class="helitage_card">
+                    <%= link_to admin_newses_path(news) do%>
+                        <table>
+                            <tr>
+                                <th width="40">
+                                    <% if @current_time < news.created_at.since(3.day) %>
+                                        <div class = "new-mark">新着</div>
+                                    <% else %>
+                                        <div class = "info-mark">お知らせ</div>
+                                    <% end %>
+                                </th>
+                                <th width="60"><%= news.created_at.strftime('%Y/%m/%d') %></th>
+
+                                <th width="180"><%= news.point %></th>
+                            </tr>
+                        </table>
+                    <% end %>
+                </div>
+            <% end %>
+        </div>
+        <div class="col-lg-1"></div>
     </div>
+</div>

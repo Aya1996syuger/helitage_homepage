@@ -20,7 +20,8 @@ class Admin::NewsesController < ApplicationController
   end
 
   def index
-    @newses = News.all
+    @newses = News.all.order("id DESC")
+    @current_time = Time.current
   end
 
   def show
